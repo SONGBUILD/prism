@@ -1,0 +1,21 @@
+services:
+  prism:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: prism:latest
+    container_name: prism
+    restart: unless-stopped
+    ports:
+      - "8787:8787"
+    volumes:
+      # SQLite 数据持久化（容器删除后数据仍在）
+      - prism-data:/app/server/data
+    env_file:
+      - .env
+    environment:
+      PORT: 8787
+      NODE_ENV: production
+
+volumes:
+  prism-data:

@@ -1,0 +1,17 @@
+node_modules
+**/node_modules
+dist
+**/dist
+.git
+.gitignore
+.DS_Store
+*.log
+server/data
+server/.env
+server/data/*.db
+server/data/*.db-shm
+server/data/*.db-wal
+.claude
+.vscode
+.idea
+README.md
