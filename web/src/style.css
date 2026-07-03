@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0a0a12;
+  --color-bg-soft: #10101c;
+  --color-card: #14141f;
+  --color-line: rgba(255, 255, 255, 0.08);
+  --color-brand: #8b6dff;
+  --color-cyan: #22d3ee;
+  --color-emerald: #34d399;
+  --color-pink: #f472b6;
+  --color-t1: #f2f3f8;
+  --color-t2: #9c9cb2;
+  --color-t3: #5f5f74;
+  --font-sans: -apple-system, "SF Pro SC", "PingFang SC", "HarmonyOS Sans SC", "Microsoft YaHei", system-ui, sans-serif;
+  --font-mono: "SF Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+
+html,
+body {
+  background: var(--color-bg);
+  color: var(--color-t1);
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+}
+
+/* 光谱渐变文字 */
+.spectrum-text {
+  background: linear-gradient(120deg, #f2f3f8 15%, #8b6dff 55%, #22d3ee 85%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.spectrum-bg {
+  background: linear-gradient(120deg, #8b6dff, #22d3ee 55%, #34d399);
+}
+
+/* 玻璃卡片 */
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--color-line);
+  backdrop-filter: blur(16px);
+  border-radius: 16px;
+}
+
+.glass-hover {
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.glass-hover:hover {
+  transform: translateY(-3px);
+  border-color: rgba(139, 109, 255, 0.45);
+  box-shadow: 0 20px 60px -20px rgba(139, 109, 255, 0.35);
+}
+
+/* 细滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* 入场动画 */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.rise {
+  animation: rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.rise-1 { animation-delay: 0.05s; }
+.rise-2 { animation-delay: 0.15s; }
+.rise-3 { animation-delay: 0.25s; }
+.rise-4 { animation-delay: 0.35s; }
