@@ -1,5 +1,11 @@
 # Prism 棱镜 · AI 模型中转站
 
+English: OpenAI-compatible LLM API gateway (Vue 3 + Express). Model catalog, API keys, usage billing, and a playground. Demo-friendly if no upstream key is set.
+
+Site / hire: [heysony.com](https://heysony.com)
+
+---
+
 > 一束光，折射整个 AI 宇宙 —— OpenAI 兼容协议的大模型 API 中转站，参考 openrouter.ai。
 
 ![tech](https://img.shields.io/badge/Vue3-Naive%20UI-8b6dff) ![tech](https://img.shields.io/badge/Node-Express%20%2B%20SQLite-34d399) ![tech](https://img.shields.io/badge/Pay-%E6%98%93%E6%94%AF%E4%BB%98%E5%8D%8F%E8%AE%AE-22d3ee)
